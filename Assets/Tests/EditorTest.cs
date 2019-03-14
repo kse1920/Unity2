@@ -18,7 +18,15 @@ namespace Tests
             gameObject.name = newGameObjectName;
             Assert.AreEqual(newGameObjectName, gameObject.name);
         }
-
+        [Test]
+        public void EditorTestSimpleFiled()
+        {
+            // Use the Assert class to test conditions
+            var gameObject = new GameObject();
+            var testObjectName = "My game object";
+            gameObject.name = "Hello";
+            Assert.AreEqual(newGameObjectName, gameObject.name);
+        }
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
