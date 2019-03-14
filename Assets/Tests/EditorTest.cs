@@ -10,6 +10,7 @@ namespace Tests
     {
         // A Test behaves as an ordinary method
         [Test]
+        [Category("PassedTests")]
         public void EditorTestSimplePasses()
         {
             // Use the Assert class to test conditions
@@ -19,6 +20,7 @@ namespace Tests
             Assert.AreEqual(newGameObjectName, gameObject.name);
         }
         [Test]
+        [Category("FailedTests")]
         public void EditorTestSimpleFiled()
         {
             // Use the Assert class to test conditions
@@ -30,6 +32,7 @@ namespace Tests
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
+        [Category("PassedTests")]
         public IEnumerator EditorTestWithEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
